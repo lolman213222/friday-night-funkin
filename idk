@@ -1,0 +1,26 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the window
+window = pygame.display.set_mode((640, 480))
+pygame.display.set_caption('Friday Night Funkin Mod')
+
+# Load images
+background = pygame.image.load('background.png')  # Replace 'background.png' with your own image
+character = pygame.image.load('character.png')    # Replace 'character.png' with your own image
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Draw the background and character
+    window.blit(background, (0, 0))
+    window.blit(character, (100, 200))  # Adjust position as needed
+
+    pygame.display.update()
+
+pygame.quit()
